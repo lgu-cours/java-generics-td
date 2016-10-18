@@ -5,7 +5,7 @@ class Stat<T extends Number>
 	T[] nums; // Tableau de "Number" ou sous-classe de "Number"
 	   
 	// Constructeur avec tableau de nombres
-	Stat(T[] p) 
+	public Stat(T[] p) 
 	{ 
 		nums = p; 
 	} 

@@ -1,14 +1,10 @@
 package generics.td1;
 
-import static org.junit.Assert.*;
-
 import java.util.ArrayList;
-
-import generics.td2.Capsule;
 
 import org.junit.Test;
 
-public class ArrayListTest {
+public class TD1_1_ArrayListTest {
 
 	@Test
 	public void test1NoType() {
@@ -44,7 +40,11 @@ public class ArrayListTest {
 	public void test2ObjectType() {
 		
 		// ArrayList<?> list = new ArrayList<Object>(); // OK, mais inutilisable : list.add(..) => ERR
-		// ArrayList<?> list = new ArrayList<?>(); // ERR : pas d'instanciation avec <?>		
+		// ArrayList<?> list = new ArrayList<?>(); // ERR : pas d'instanciation avec <?>
+		
+		// List<?>      list2       = new ArrayList<>(); // OK, mais inutilisable : list.add(..) => ERR
+		// list2.add(""); // Erreur
+		
 		ArrayList<Object> list = new ArrayList<Object>();
 		
 		list.add(new Integer(0));

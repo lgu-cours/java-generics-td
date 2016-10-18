@@ -1,8 +1,5 @@
 package generics.tp;
 
-import static org.junit.Assert.*;
-import generics.td2.Capsule;
-
 import org.junit.Test;
 
 public class CubeTest {
@@ -10,25 +7,27 @@ public class CubeTest {
 	@Test
 	public void test1() {
 		
-		Cube<Integer> d = new  Cube<>(2, 3, 4);
-		Integer h = d.getHeight();
-		int w = d.getWidth();
-		int l = d.getLength();
+		Cube<Integer> cube = new  Cube<>(2, 3, 4);
+	    System.out.println("length = " + cube.getLength() );
+	    System.out.println("width  = " + cube.getWidth()  );
+	    System.out.println("height = " + cube.getHeight() );
 		
-		double v = d.volume();
+		double v = cube.volume();
 	    System.out.println("volume = " + v  );
+	    
 	}
 
 	@Test
 	public void test2() {
 		
-		Cube<Double> d = new  Cube<>(1.0, 2.0, 3.0);
-		Double h = d.getHeight();
-		double w = d.getWidth();
-		double l = d.getLength();
+		Cube<Double> cube = new  Cube<>(1.0, 2.0, 3.0);
+	    System.out.println("length = " + cube.getLength() );
+	    System.out.println("width  = " + cube.getWidth()  );
+	    System.out.println("height = " + cube.getHeight() );
 		
-		double v = d.volume();
+		double v = cube.volume();
 	    System.out.println("volume = " + v  );
+	    
 	}
 	
 	@Test
@@ -38,6 +37,10 @@ public class CubeTest {
 		Float h = d.getHeight();
 		float w = d.getWidth();
 		double l = d.getLength();
+
+		System.out.println(" h = " + h );
+		System.out.println(" w = " + w );
+		System.out.println(" l = " + l );
 		
 		double v = d.volume();
 	    System.out.println("volume = " + v  );
@@ -45,10 +48,9 @@ public class CubeTest {
 
 	@Test
 	public void test4() {
-		
-//		Dimensions<String> d = new  Dimensions<>("1","2","3");
-//
-//		Dimensions<Boolean> d = new  Dimensions<>(true, false, true);
+		// ERR : type mismatch 
+		// Cube<String> cube = new  Cube<>("1","2","3");
+		// Cube<Boolean> cube = new  Cube<>(true, false, true);
 	}
 
 }
