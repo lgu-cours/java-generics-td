@@ -42,7 +42,7 @@ public class GenMethod {
 		
 		Number  numbers[]  = { 1, 2, 3, 4, 5 };
 		Integer integers[] = { 1, 2, 3, 4, 5 };
-		String s[] = { "aa", "bb", "cc", "dd", "ee" };
+		String  s[] = { "aa", "bb", "cc", "dd", "ee" };
 		
 		System.out.println( " is 2 in array ? " + isObjIn(new Integer(2), numbers ));
 		System.out.println( " is 2 in array ? " + isObjIn(2, numbers ));
