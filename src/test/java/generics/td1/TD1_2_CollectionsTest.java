@@ -53,8 +53,26 @@ public class TD1_2_CollectionsTest {
 		System.out.println("\n--- Min / Max ");
 		List<Integer> list = getIntegerList() ;
 		print(list);
+		
+		//--- "Integer" type
+		// see method doc in IDE :
+		// <Integer> Integer java.util.Collections.min(Collection<? extends Integer> coll)
 		System.out.println("min = " + Collections.min(list) );
+		
+		// <Integer> Integer java.util.Collections.min(Collection<? extends Integer> coll)
 		System.out.println("max = " + Collections.max(list) );
+		
+		//--- "Short" type
+		List<Short> list2 = new ArrayList<>();
+		list2.add((short)2);
+		list2.add((short)5);
+		
+		//Short min =  Collections.min(list); // ERR
+		
+		// see method doc in IDE :
+		// <Short> Short java.util.Collections.min(Collection<? extends Short> coll)
+		Short min =  Collections.min(list2); 
+		System.out.println("min = " + min );
 	}		
 
 	@Test
